@@ -58,6 +58,13 @@
       msg += "</table>";
       $("#message").html(msg);
     }
+    function seatchLevelGT{
+        let level=parseInt($("#level").val(),10);
+        let TestDataClass=ncmb.DataStore(db);
+        TestDataClass.greaterThen("level",level).fetchAll().then(function(results){
+            showResults(results);
+        })
+    }
   </script>
 </head>
 
