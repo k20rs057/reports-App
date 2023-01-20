@@ -41,6 +41,15 @@
         })
     }
 
+   function type() {
+         let type=$("#type").val();//変数宣言
+      let TestDataClass = ncmb.DataStore(db);
+      TestDataClass.equalTo("type",type).fetchAll()
+        .then(function(results) {
+          showResults(results);
+        })
+    }
+
     
 
     function showResults(results) {
@@ -80,9 +89,8 @@
     <button class="btn" onclick="fetchAll()">Fetch All</button>
     <button class="btn" onclick="searchName()">Name</button>
   <br>
-    <button class="btn" onclick="searchLevelLT()">cost &lt</button>
     <button class="btn" onclick="searchLevel()">cost</button>
-    <button class="btn" onclick="searchLevelGT()">cost &gt</button>
+    <button class="btn" onclick="type()">type</button>
   </div>
   <div id="message">message area</div>
 </body>
