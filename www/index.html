@@ -41,7 +41,7 @@
         })
     }
 
-   function type() {
+   function searchType() {
          let type=$("#type").val();//変数宣言
       let TestDataClass = ncmb.DataStore(db);
       TestDataClass.equalTo("type",type).fetchAll()
@@ -72,7 +72,7 @@
 </head>
 
 <body>
-  <h1>mBaaS search</h1>
+  <h1>DM</h1>
   <div>
     <label for="name">name:</label>
     <input id="name" type="text" placeholder="name">
@@ -90,7 +90,7 @@
     <button class="btn" onclick="searchName()">Name</button>
   <br>
     <button class="btn" onclick="searchLevel()">cost</button>
-    <button class="btn" onclick="type()">type</button>
+    <button class="btn" onclick="searchType()">type</button>
   </div>
   <div id="message">message area</div>
 </body>
